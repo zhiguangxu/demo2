@@ -1,13 +1,23 @@
-<h1>Files in the current directory</h1>
+<% provide(:title, "Files in the current directory") %>
 
-<p>
-    The files in the current directory are: 
-</p>
-<ul>    
-    <% for file in @files %>
-    <li><%= file; %></li>
-    <% end %>
-</ul>
-<p>
-Say <%= link_to "Hello", say_hello_path %> again.
-</p>
+	<div class="panel panel-default">
+
+		<div class="panel-heading">
+			<h3 class="panel-title">
+			    It is now
+				<%=@time%>
+			</h3>
+		</div>
+
+		<div class="panel-body">
+            <ul>    
+                <% for file in @files %>
+                <li><%= file; %></li>
+                <% end %>
+            </ul>
+            <p>
+                Say <%= link_to "Hello", say_hello_path %> again.
+            </p>
+		</div>
+
+	</div>
