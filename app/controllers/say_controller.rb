@@ -5,4 +5,8 @@ class SayController < ApplicationController
 
   def goodbye
   end
+  
+  def filenames
+    @files = Dir.glob("**/*")
+  end
 end
